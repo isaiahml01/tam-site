@@ -2,141 +2,257 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Amicicidal Massacre</title>
 
+  <!-- HYBRID FONTS: Serif (headings) + Sans (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+
   <style>
-    /* ---- BASIC RESET ---- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background-color: #0b0d10;
-      color: #f3f4f6;
-      line-height: 1.6;
+    :root{
+      --bg:#0b0d10; --surface:#0f1115; --gold:#d0b36f; --gold-2:#f0d68c; --text:#f3f4f6; --muted:#b8bcc4; --line:rgba(255,255,255,.08); --cyan:rgba(59,199,196,.10)
     }
-
-    /* ---- HEADER ---- */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 5%;
-      background-color: rgba(15, 17, 21, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      color: #d0b36f;
-      font-size: 1.3rem;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: #ccc;
-      margin-left: 1.2rem;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #fff; }
-
-    /* ---- HERO ---- */
-    .hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 85vh;
-      background: radial-gradient(ellipse at center, rgba(59,199,196,0.1), #0b0d10);
-      padding: 0 10%;
-    }
-
-    .hero h2 {
-      color: #fff;
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .logline {
-      color: #c4c4c4;
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-      font-size: 1.1rem;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .btn {
-      padding: 0.8rem 1.8rem;
-      border-radius: 4px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn.gold {
-      background-color: #d0b36f;
-      color: #0b0d10;
-    }
-    .btn.gold:hover { background-color: #f0d68c; }
-
-    .btn.outline {
-      border: 1px solid #d0b36f;
-      color: #d0b36f;
-    }
-    .btn.outline:hover {
-      background-color: #d0b36f;
-      color: #0b0d10;
-    }
-
-    /* ---- FOOTER ---- */
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    h1,h2,h3,h4{font-family:"Playfair Display", Georgia, serif; font-weight:700; letter-spacing:.2px}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+    .line{height:1px;background:var(--line)}
+    /* NAV */
+    header{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.75);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{color:var(--gold);font-weight:700;letter-spacing:1px}
+    .nav a{color:#cfd3da;text-decoration:none;margin-left:18px}
+    .nav a:hover{color:#fff}
+    /* HERO */
+    .hero{min-height:82vh;display:grid;place-items:center;background:radial-gradient(70% 40% at 50% 0%, var(--cyan), transparent)}
+    .hero h1{font-size:clamp(32px,5vw,56px);text-align:center}
+    .hero p{max-width:720px;margin:16px auto 28px;color:#c9ccd2;text-align:center}
+    .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:6px;font-weight:600;text-decoration:none;transition:.2s}
+    .btn.gold{background:var(--gold);color:#15171b}
+    .btn.gold:hover{background:var(--gold-2)}
+    .btn.outline{border:1px solid var(--gold);color:var(--gold)}
+    .btn.outline:hover{background:var(--gold);color:#15171b}
+    /* SECTIONS */
+    section{padding:64px 0;border-top:1px solid var(--line)}
+    section h2{font-size:clamp(24px,3.5vw,36px);margin-bottom:6px}
+    .sub{color:#c9ccd2;margin-bottom:22px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:840px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .muted{color:#9aa0a6}
+    ul.clean{list-style:none}
+    ul.clean li{padding:6px 0;border-bottom:1px dashed var(--line)}
+    .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:#e7e7ea;margin-right:6px}
+    .right{display:flex;justify-content:flex-end}
+    footer{padding:40px 0;border-top:1px solid var(--line);color:#9aa0a6}
+    /* small helper spacing */
+    .mt-8{margin-top:32px}.mt-12{margin-top:48px}.mt-16{margin-top:64px}
   </style>
 </head>
-
 <body>
-  <!-- HEADER / NAV -->
+
+  <!-- NAV -->
   <header>
-    <h1>The Amicicidal Massacre</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Story</a>
-      <a href="#">Characters</a>
-      <a href="#">Casting</a>
-      <a href="#">Investors</a>
-    </nav>
+    <div class="wrap nav">
+      <div class="brand">THE AMICICIDAL MASSACRE</div>
+      <nav>
+        <a href="#story">Story</a>
+        <a href="#characters">Characters</a>
+        <a href="#casting">Casting</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#vision">Director’s Vision</a>
+        <a href="#investors">Investors</a>
+        <a href="#press">Press</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
-    <div>
-      <h2>Every Love Story Needs a Witness</h2>
-      <p class="logline">
-        When a glamorous engagement party ends in blood, a maid of honor’s survivor story becomes her most dangerous performance yet.
-      </p>
-      <div class="buttons">
-        <a href="deck.pdf" class="btn gold">View Pitch Deck</a>
-        <a href="pilot.pdf" class="btn outline">Read Pilot Script</a>
+    <div class="wrap" style="text-align:center">
+      <h1>Every Love Story Needs a Witness</h1>
+      <p>When a glamorous engagement party ends in blood, a maid of honor’s survivor story becomes her most dangerous performance yet.</p>
+      <div class="btns">
+        <a class="btn gold" href="pitch-deck.pdf" target="_blank">View Pitch Deck (PDF)</a>
+        <a class="btn outline" href="pilot-script.pdf" target="_blank">Read Pilot Script (PDF)</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- STORY -->
+  <section id="story">
+    <div class="wrap">
+      <h2>Story</h2>
+      <div class="sub">A prestige psychological thriller about visibility, confession, and the cost of performance.</div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Controlling Idea</h3>
+          <p class="muted">When the desire to be seen replaces the desire to be loved, truth becomes performance — and performance becomes survival.</p>
+        </div>
+        <div class="card">
+          <h3>World & Tone</h3>
+          <p class="muted">Chicago as character. Mixed-media language: vlogs, bodycam, archive. Beauty as discomfort; camera as confession.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS -->
+  <section id="characters">
+    <div class="wrap">
+      <h2>Characters</h2>
+      <div class="sub">Archetype-driven bios. Spoiler-safe by design.</div>
+      <div class="grid cols-3">
+        <div class="card">
+          <h4>Lily Jameson <span class="tag">Lead</span></h4>
+          <p class="muted">The Devoted Monster — tender devotion masking obsession; survivor who edits the narrative.</p>
+        </div>
+        <div class="card">
+          <h4>Mia Brooks <span class="tag">Lead</span></h4>
+          <p class="muted">The Idol — curated perfection with flickers of doubt; omnipresent through her archive.</p>
+        </div>
+        <div class="card">
+          <h4>Elisha Ruiz <span class="tag">Supporting</span></h4>
+          <p class="muted">The Witness — artist whose survivor’s guilt turns toward visibility and truth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASTING -->
+  <section id="casting">
+    <div class="wrap">
+      <h2>Casting</h2>
+      <div class="sub">Selective roles. Paid. Non-union. Submit reel/headshot links only.</div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>Lily Jameson (Lead)</h4>
+          <ul class="clean">
+            <li>Range 23–28 · Emotional precision · Intense psychological beats</li>
+            <li>Comp: $150–$250/day · 2–3 days</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Mia Brooks (Lead)</h4>
+          <ul class="clean">
+            <li>Range 24–30 · Camera-native charisma · Choreographed struggle</li>
+            <li>Comp: $150–$250/day · 2–3 days</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right mt-8">
+        <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Casting%20Submission&body=Name%3A%0ARole%3A%0ALinks%20(reel%2FIG)%3A%0ANotes%3A">Submit by Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EPISODES -->
+  <section id="episodes">
+    <div class="wrap">
+      <h2>Episodes</h2>
+      <div class="sub">Six parts · 15–20 minutes each · Teases only, no spoilers.</div>
+      <div class="grid cols-3">
+        <div class="card"><strong>EP1 — The Rooftop</strong><p class="muted">Engagement vlog collapses into blood and silence.</p></div>
+        <div class="card"><strong>EP2 — Playback</strong><p class="muted">Survivor Lily retells the story — and edits herself.</p></div>
+        <div class="card"><strong>EP3 — The Archive</strong><p class="muted">Leaked clips contradict the survivor narrative.</p></div>
+        <div class="card"><strong>EP4 — Rehearsal</strong><p class="muted">Staged recreations feel realer than memory.</p></div>
+        <div class="card"><strong>EP5 — Exposure</strong><p class="muted">A live podcast confrontation becomes interrogation.</p></div>
+        <div class="card"><strong>EP6 — The Witness</strong><p class="muted">Final confession uploaded by unseen hands.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTOR'S VISION -->
+  <section id="vision">
+    <div class="wrap">
+      <h2>Director’s Vision</h2>
+      <div class="sub">Camera as confession. Beauty as discomfort. Horror as truth.</div>
+      <div class="grid cols-3">
+        <div class="card"><strong>Mia’s World</strong><p class="muted">Soft whites/pinks; overexposed cosmetic lighting — perfection through exposure.</p></div>
+        <div class="card"><strong>Lily’s World</strong><p class="muted">Desaturated blues & deep reds; side-lit practicals — obsession & repression.</p></div>
+        <div class="card"><strong>Aftermath / Archive</strong><p class="muted">Cold cyan LEDs; digital noise; memory corruption as data decay.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTORS -->
+  <section id="investors">
+    <div class="wrap">
+      <h2>Investors</h2>
+      <div class="sub">Smart-scale budget with studio-level craft and a clear distribution path.</div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>Budget Snapshot</h4>
+          <ul class="clean">
+            <li>Total: ~$37K–$40K (6 eps)</li>
+            <li>Cast & Crew ~30% · Camera/Lighting ~25% · Post ~20% · Locations ~15% · Mktg/Cont. ~10%</li>
+          </ul>
+          <div class="mt-8">
+            <a class="btn gold" href="pitch-deck.pdf" target="_blank">Open Pitch Deck</a>
+            <a class="btn outline" href="pilot-script.pdf" target="_blank">Open Pilot Script</a>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Distribution & Festivals</h4>
+          <ul class="clean">
+            <li>Festival lane: SeriesFest, Urbanworld, Outfest</li>
+            <li>AVOD/SVOD: Filmhub syndication; Tubi / Revry / Prime Video</li>
+            <li>Audience build: YouTube episodic window</li>
+          </ul>
+          <div class="mt-8">
+            <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Investor%20Inquiry&body=Name%20%2F%20Company%3A%0AInterest%20(Finance%2FDistribution%2FEP)%3A%0A">Request Data Room</a>
+          </div>
+        </div>
+      </div>
+      <!-- Partnership can live later as a section or link to a form -->
+      <!-- <div class="right mt-8"><a class="btn outline" href="partnership.html">Partnership Application</a></div> -->
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press">
+    <div class="wrap">
+      <h2>Press</h2>
+      <div class="sub">One-sheet facts, hashtags, and press contact.</div>
+      <div class="grid cols-3">
+        <div class="card"><strong>Format</strong><p class="muted">Limited series · 6 x 15–20 min · Chicago</p></div>
+        <div class="card"><strong>Hooks</strong><p class="muted">Visibility as modern horror · Confession media · Post-truth romance</p></div>
+        <div class="card"><strong>Targets</strong><p class="muted">Essence, Blavity, AfroTech, IndieWire</p></div>
+      </div>
+      <div class="right mt-8"><a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Press%20Inquiry">Press Contact</a></div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="wrap">
+      <h2>Team</h2>
+      <div class="sub">Markel Productions · Markel Media & Management</div>
+      <div class="card">
+        <strong>Isaiah M. Lesley</strong> — Director · Writer · Producer (Chicago). Work explores faith, identity, and emotional truth through psychological realism.
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="sub">For investors, casting, crew, and partnerships.</div>
+      <div class="card">
+        <p class="muted">Email: <a href="mailto:isaiah@markelmgmt.com" style="color:var(--gold);text-decoration:none">isaiah@markelmgmt.com</a></p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Markel Media &amp; Management · Markel Productions</p>
+    <div class="wrap">
+      © 2025 Markel Media & Management · Markel Productions
+    </div>
   </footer>
 </body>
 </html>
