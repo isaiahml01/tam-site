@@ -4,24 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Amicicidal Massacre</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ---- BASIC RESET ---- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #0b0d10;
+      color: #f3f4f6;
+      line-height: 1.6;
+    }
+
+    /* ---- HEADER ---- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background-color: rgba(15, 17, 21, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #d0b36f;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fff; }
+
+    /* ---- HERO ---- */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 85vh;
+      background: radial-gradient(ellipse at center, rgba(59,199,196,0.1), #0b0d10);
+      padding: 0 10%;
+    }
+
+    .hero h2 {
+      color: #fff;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .logline {
+      color: #c4c4c4;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn.gold {
+      background-color: #d0b36f;
+      color: #0b0d10;
+    }
+    .btn.gold:hover { background-color: #f0d68c; }
+
+    .btn.outline {
+      border: 1px solid #d0b36f;
+      color: #d0b36f;
+    }
+    .btn.outline:hover {
+      background-color: #d0b36f;
+      color: #0b0d10;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
 </head>
+
 <body>
   <!-- HEADER / NAV -->
-  <header class="nav">
-    <h1 class="logo">The Amicicidal Massacre</h1>
+  <header>
+    <h1>The Amicicidal Massacre</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="story.html">Story</a>
-      <a href="characters.html">Characters</a>
-      <a href="casting.html">Casting</a>
-      <a href="invest.html">Investors</a>
+      <a href="#">Home</a>
+      <a href="#">Story</a>
+      <a href="#">Characters</a>
+      <a href="#">Casting</a>
+      <a href="#">Investors</a>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-text">
+    <div>
       <h2>Every Love Story Needs a Witness</h2>
       <p class="logline">
         When a glamorous engagement party ends in blood, a maid of honor’s survivor story becomes her most dangerous performance yet.
@@ -35,7 +136,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Markel Media & Management · Markel Productions</p>
+    <p>&copy; 2025 Markel Media &amp; Management · Markel Productions</p>
   </footer>
 </body>
 </html>
