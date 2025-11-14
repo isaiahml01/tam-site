@@ -3,52 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Amicicidal Massacre</title>
+  <title>The Amicicidal Massacre | Limited Series</title>
 
   <!-- HYBRID FONTS: Serif (headings) + Sans (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
 
+  <!-- Basic SEO -->
+  <meta name="description" content="The Amicicidal Massacre — a Chicago-set psychological thriller limited series about love, content, and confession colliding on camera. Six episodes, festival-forward strategy, and a smart-scale budget for investors and partners." />
+
   <style>
     :root{
-      --bg:#0b0d10; --surface:#0f1115; --gold:#d0b36f; --gold-2:#f0d68c; --text:#f3f4f6; --muted:#b8bcc4; --line:rgba(255,255,255,.08); --cyan:rgba(59,199,196,.10)
+      --bg:#0b0d10;
+      --surface:#0f1115;
+      --gold:#d0b36f;
+      --gold-2:#f0d68c;
+      --text:#f3f4f6;
+      --muted:#b8bcc4;
+      --line:rgba(255,255,255,.08);
+      --cyan:rgba(59,199,196,.10)
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-    h1,h2,h3,h4{font-family:"Playfair Display", Georgia, serif; font-weight:700; letter-spacing:.2px}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    h1,h2,h3,h4{
+      font-family:"Playfair Display", Georgia, serif;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
     .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-    .line{height:1px;background:var(--line)}
-    /* NAV */
-    header{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.75);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{color:var(--gold);font-weight:700;letter-spacing:1px}
-    .nav a{color:#cfd3da;text-decoration:none;margin-left:18px}
-    .nav a:hover{color:#fff}
-    /* HERO */
-    .hero{min-height:82vh;display:grid;place-items:center;background:radial-gradient(70% 40% at 50% 0%, var(--cyan), transparent)}
-    .hero h1{font-size:clamp(32px,5vw,56px);text-align:center}
-    .hero p{max-width:720px;margin:16px auto 28px;color:#c9ccd2;text-align:center}
-    .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn{padding:12px 18px;border-radius:6px;font-weight:600;text-decoration:none;transition:.2s}
-    .btn.gold{background:var(--gold);color:#15171b}
-    .btn.gold:hover{background:var(--gold-2)}
-    .btn.outline{border:1px solid var(--gold);color:var(--gold)}
-    .btn.outline:hover{background:var(--gold);color:#15171b}
-    /* SECTIONS */
-    section{padding:64px 0;border-top:1px solid var(--line)}
-    section h2{font-size:clamp(24px,3.5vw,36px);margin-bottom:6px}
-    .sub{color:#c9ccd2;margin-bottom:22px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:840px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:18px}
     .muted{color:#9aa0a6}
+    .sub{color:#c9ccd2;margin-bottom:22px;max-width:780px}
+    .accent{color:var(--gold)}
+
+    /* NAV */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(11,13,16,.85);
+      backdrop-filter:saturate(140%) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      color:var(--gold);
+      font-weight:700;
+      letter-spacing:1.2px;
+      font-size:13px;
+    }
+    nav a{
+      color:#cfd3da;
+      text-decoration:none;
+      margin-left:18px;
+      font-size:13px;
+    }
+    nav a:hover{color:#fff}
+
+    /* HERO */
+    .hero{
+      min-height:82vh;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(70% 40% at 50% 0%, var(--cyan), transparent),
+        linear-gradient(to bottom,#050608 0%,#0b0d10 28%,#050608 100%);
+    }
+    .hero h1{
+      font-size:clamp(32px,4.8vw,54px);
+      text-align:center;
+    }
+    .caps-label{
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#8f95a0;
+      margin-bottom:10px;
+    }
+    .hero-logline{
+      max-width:820px;
+      margin:16px auto 12px;
+      color:#c9ccd2;
+      text-align:center;
+      font-size:15px;
+    }
+    .hero-comp{
+      text-align:center;
+      font-size:13px;
+      color:#8f95a0;
+      margin-bottom:26px;
+    }
+    .hero-meta{
+      text-align:center;
+      font-size:13px;
+      color:#8f95a0;
+      margin-top:8px;
+    }
+    .btns{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      padding:11px 18px;
+      border-radius:999px;
+      font-weight:600;
+      text-decoration:none;
+      transition:.2s;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      border:1px solid transparent;
+    }
+    .btn.gold{
+      background:var(--gold);
+      color:#15171b;
+      border-color:var(--gold);
+    }
+    .btn.gold:hover{background:var(--gold-2);border-color:var(--gold-2)}
+    .btn.outline{
+      border:1px solid var(--gold);
+      color:var(--gold);
+      background:transparent;
+    }
+    .btn.outline:hover{
+      background:var(--gold);
+      color:#15171b;
+    }
+    .btn.ghost{
+      border:1px solid var(--line);
+      color:#d9dde4;
+      background:rgba(255,255,255,0.01);
+    }
+    .btn.ghost:hover{
+      border-color:var(--gold);
+      color:var(--gold);
+    }
+
+    /* SECTIONS */
+    section{
+      padding:64px 0;
+      border-top:1px solid var(--line);
+      background:var(--bg);
+    }
+    section h2{
+      font-size:clamp(24px,3.5vw,34px);
+      margin-bottom:6px;
+    }
+
+    .grid{display:grid;gap:16px}
+    @media(min-width:840px){
+      .grid.cols-2{grid-template-columns:1fr 1fr}
+      .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    }
+
+    .card{
+      background:rgba(15,17,21,.92);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px;
+    }
+    .card h3,.card h4{margin-bottom:6px;font-size:16px}
+    .card strong{font-weight:600}
+
     ul.clean{list-style:none}
-    ul.clean li{padding:6px 0;border-bottom:1px dashed var(--line)}
-    .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:#e7e7ea;margin-right:6px}
+    ul.clean li{
+      padding:6px 0;
+      border-bottom:1px dashed var(--line);
+      font-size:14px;
+    }
+
+    .tag{
+      display:inline-block;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:3px 9px;
+      font-size:11px;
+      color:#e7e7ea;
+      margin-left:6px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .highlight-row{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+    @media(min-width:720px){
+      .highlight-row{grid-template-columns:repeat(3,1fr)}
+    }
+    .highlight-pill{
+      border-radius:999px;
+      border:1px solid var(--line);
+      padding:10px 14px;
+      font-size:13px;
+      color:#d3d6de;
+      background:rgba(255,255,255,0.01);
+    }
+
     .right{display:flex;justify-content:flex-end}
-    footer{padding:40px 0;border-top:1px solid var(--line);color:#9aa0a6}
+    footer{
+      padding:40px 0;
+      border-top:1px solid var(--line);
+      color:#9aa0a6;
+      font-size:13px;
+    }
+
     /* small helper spacing */
-    .mt-8{margin-top:32px}.mt-12{margin-top:48px}.mt-16{margin-top:64px}
+    .mt-4{margin-top:16px}
+    .mt-8{margin-top:32px}
+    .mt-12{margin-top:48px}
+    .mt-16{margin-top:64px}
   </style>
 </head>
 <body>
@@ -56,13 +232,13 @@
   <!-- NAV -->
   <header>
     <div class="wrap nav">
-      <div class="brand">THE AMICICIDAL MASSACRE</div>
+      <div class="brand">THE AMICICIDAL MASSACRE · LIMITED SERIES</div>
       <nav>
         <a href="#story">Story</a>
         <a href="#characters">Characters</a>
         <a href="#casting">Casting</a>
         <a href="#episodes">Episodes</a>
-        <a href="#vision">Director’s Vision</a>
+        <a href="#vision">Visual World</a>
         <a href="#investors">Investors</a>
         <a href="#press">Press</a>
         <a href="#team">Team</a>
@@ -74,11 +250,52 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap" style="text-align:center">
-      <h1>Every Love Story Needs a Witness</h1>
-      <p>When a glamorous engagement party ends in blood, a maid of honor’s survivor story becomes her most dangerous performance yet.</p>
+      <p class="caps-label">Psychological Thriller · Limited Series · Chicago</p>
+      <h1>Every Love Story Needs a Witness.</h1>
+      <p class="hero-logline">
+        When a glamorous engagement party ends in blood, the maid of honor becomes the only survivor—
+        and turns her testimony into the most dangerous performance of her life.
+      </p>
+      <p class="hero-comp">
+        <span class="accent">Core question:</span> What happens when love, content, and confession collide?<br/>
+        <span class="accent">Tone:</span> <em>Gone Girl</em> x <em>You</em> with the formal play of <em>Searching</em>.
+      </p>
       <div class="btns">
         <a class="btn gold" href="pitch-deck.pdf" target="_blank">View Pitch Deck (PDF)</a>
         <a class="btn outline" href="pilot-script.pdf" target="_blank">Read Pilot Script (PDF)</a>
+        <a class="btn ghost" href="#investors">Investor Overview</a>
+      </div>
+      <p class="hero-meta">
+        Produced by Markel Media &amp; Management · Markel Productions · 6 x 15–20 min · Designed for festival play and AVOD/SVOD expansion.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY THIS WINS / HIGHLIGHTS -->
+  <section id="highlights">
+    <div class="wrap">
+      <h2>Why This Series Wins.</h2>
+      <div class="sub">
+        Built from the ground up to feel like a studio thriller while living in a smart, independent budget:
+        contained locations, focused cast, and a visual language that travels across festivals, streamers, and social.
+      </div>
+
+      <div class="highlight-row">
+        <div class="highlight-pill">
+          <strong>Smart scale. Studio quality.</strong><br/>
+          One heightened weekend, a tight ensemble, and a rooftop engagement gone wrong.
+          The stakes and scope read big; the production footprint stays lean and controllable.
+        </div>
+        <div class="highlight-pill">
+          <strong>Form-forward, never alienating.</strong><br/>
+          Found footage, therapy tapes, police interviews, vlogs, and live podcasts layer together,
+          but always in service of a clean, addictive central mystery: what really happened on that rooftop?
+        </div>
+        <div class="highlight-pill">
+          <strong>Specific voice, wide audience.</strong><br/>
+          A Black, queer, Chicago lens on love, faith, and performance in a genre that rarely centers these stories—
+          without becoming homework. It’s engineered to entertain first and linger after.
+        </div>
       </div>
     </div>
   </section>
@@ -87,15 +304,27 @@
   <section id="story">
     <div class="wrap">
       <h2>Story</h2>
-      <div class="sub">A prestige psychological thriller about visibility, confession, and the cost of performance.</div>
+      <div class="sub">
+        <strong>The Amicicidal Massacre</strong> is a limited psychological thriller series about how far
+        people will go to be believed when their entire life has been built for the camera.
+        Told through found footage, therapy and police tapes, leaks, and a live podcast,
+        the series dissects our hunger to be seen—and forgiven—in public.
+      </div>
       <div class="grid cols-2">
         <div class="card">
           <h3>Controlling Idea</h3>
-          <p class="muted">When the desire to be seen replaces the desire to be loved, truth becomes performance — and performance becomes survival.</p>
+          <p class="muted">
+            When the need to be visible outweighs the need to be loved, truth turns into a performance—
+            and performance becomes the only way to survive.
+          </p>
         </div>
         <div class="card">
-          <h3>World & Tone</h3>
-          <p class="muted">Chicago as character. Mixed-media language: vlogs, bodycam, archive. Beauty as discomfort; camera as confession.</p>
+          <h3>World &amp; Tone</h3>
+          <p class="muted">
+            Chicago as a living character: lakefront luxury meets church basements and South Side rooftops.
+            The camera is confession booth, weapon, and witness. Emotional horror is shot like psychological realism:
+            silence, symmetry, and stillness become weapons.
+          </p>
         </div>
       </div>
     </div>
@@ -105,19 +334,34 @@
   <section id="characters">
     <div class="wrap">
       <h2>Characters</h2>
-      <div class="sub">Archetype-driven bios. Spoiler-safe by design.</div>
+      <div class="sub">
+        Archetype-driven, spoiler-safe bios pulled from the series bible—designed for casting and press
+        without giving away the key turns.
+      </div>
       <div class="grid cols-3">
         <div class="card">
           <h4>Lily Jameson <span class="tag">Lead</span></h4>
-          <p class="muted">The Devoted Monster — tender devotion masking obsession; survivor who edits the narrative.</p>
+          <p class="muted">
+            The Devoted Monster. A meticulous maid of honor whose tenderness masks obsession.
+            Lily survives the rooftop massacre and learns that in a world addicted to content,
+            the safest place to hide is inside the story everyone wants to hear.
+          </p>
         </div>
         <div class="card">
           <h4>Mia Brooks <span class="tag">Lead</span></h4>
-          <p class="muted">The Idol — curated perfection with flickers of doubt; omnipresent through her archive.</p>
+          <p class="muted">
+            The Idol. A rising Chicago influencer whose curated perfection never shows the cracks:
+            her faith doubts, queer history, and fear of disappointing the community that made her.
+            Even after death, Mia’s archive shapes every frame.
+          </p>
         </div>
         <div class="card">
           <h4>Elisha Ruiz <span class="tag">Supporting</span></h4>
-          <p class="muted">The Witness — artist whose survivor’s guilt turns toward visibility and truth.</p>
+          <p class="muted">
+            The Witness. A visual artist and friend caught between grief and survival.
+            Elisha’s eye for images—and outrage at how quickly the internet moves on—drives
+            the series toward uncomfortable truths.
+          </p>
         </div>
       </div>
     </div>
@@ -126,26 +370,33 @@
   <!-- CASTING -->
   <section id="casting">
     <div class="wrap">
-      <h2>Casting</h2>
-      <div class="sub">Selective roles. Paid. Non-union. Submit reel/headshot links only.</div>
+      <h2>Casting Snapshot</h2>
+      <div class="sub">
+        Select, paid, non-union roles. Built for actors who want layered psychological material,
+        emotional range, and awards-forward character arcs.
+      </div>
       <div class="grid cols-2">
         <div class="card">
           <h4>Lily Jameson (Lead)</h4>
           <ul class="clean">
-            <li>Range 23–28 · Emotional precision · Intense psychological beats</li>
-            <li>Comp: $150–$250/day · 2–3 days</li>
+            <li>Age range mid 20s · Able to move between soft, devout, and terrifyingly still.</li>
+            <li>Comfort with confession-style monologues, therapy scenes, and found-footage intimacy.</li>
+            <li>Must carry both victimhood and quiet menace in the same frame.</li>
           </ul>
         </div>
         <div class="card">
           <h4>Mia Brooks (Lead)</h4>
           <ul class="clean">
-            <li>Range 24–30 · Camera-native charisma · Choreographed struggle</li>
-            <li>Comp: $150–$250/day · 2–3 days</li>
+            <li>Age range mid-to-late 20s · Camera-native charisma; familiarity with influencer culture a plus.</li>
+            <li>Plays aspirational yet deeply human—especially in private, pre-engagement moments.</li>
+            <li>Appears through vlogs, archives, and memory in ways that reshape how we read the story.</li>
           </ul>
         </div>
       </div>
       <div class="right mt-8">
-        <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Casting%20Submission&body=Name%3A%0ARole%3A%0ALinks%20(reel%2FIG)%3A%0ANotes%3A">Submit by Email</a>
+        <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Casting%20Submission&body=Name%3A%0ARole%3A%0ALinks%20(reel%2FIG)%3A%0ANotes%3A">
+          Submit Casting Materials
+        </a>
       </div>
     </div>
   </section>
@@ -154,27 +405,88 @@
   <section id="episodes">
     <div class="wrap">
       <h2>Episodes</h2>
-      <div class="sub">Six parts · 15–20 minutes each · Teases only, no spoilers.</div>
+      <div class="sub">
+        Six 15–20 minute episodes. Each chapter shifts the storytelling device—rooftop footage,
+        interrogations, leaks, reenactments, live streams, and final confession—until the truth is
+        less important than who gets to frame it.
+      </div>
       <div class="grid cols-3">
-        <div class="card"><strong>EP1 — The Rooftop</strong><p class="muted">Engagement vlog collapses into blood and silence.</p></div>
-        <div class="card"><strong>EP2 — Playback</strong><p class="muted">Survivor Lily retells the story — and edits herself.</p></div>
-        <div class="card"><strong>EP3 — The Archive</strong><p class="muted">Leaked clips contradict the survivor narrative.</p></div>
-        <div class="card"><strong>EP4 — Rehearsal</strong><p class="muted">Staged recreations feel realer than memory.</p></div>
-        <div class="card"><strong>EP5 — Exposure</strong><p class="muted">A live podcast confrontation becomes interrogation.</p></div>
-        <div class="card"><strong>EP6 — The Witness</strong><p class="muted">Final confession uploaded by unseen hands.</p></div>
+        <div class="card">
+          <strong>EP1 — The Rooftop</strong>
+          <p class="muted">
+            The perfect engagement vlog spirals into a blood-soaked silence. Mia’s brand peaks as Lily’s
+            secret slides reveal a different kind of love story across the skyline.
+          </p>
+        </div>
+        <div class="card">
+          <strong>EP2 — Playback</strong>
+          <p class="muted">
+            Lily recounts the night in police interviews and therapy sessions.
+            Each retelling nudges the details, while bodycam footage quietly mirrors the gaps.
+          </p>
+        </div>
+        <div class="card">
+          <strong>EP3 — The Archive</strong>
+          <p class="muted">
+            Deleted footage leaks online and goes viral, exposing contradictions in Lily’s narrative.
+            Flashbacks and hallucinations blur as she insists on “reframing” the truth herself.
+          </p>
+        </div>
+        <div class="card">
+          <strong>EP4 — Rehearsal</strong>
+          <p class="muted">
+            We return to Mia and Lily’s teenage intimacy through reenactments Lily directs.
+            The staged scenes start to feel more honest than anyone’s memory, including her own.
+          </p>
+        </div>
+        <div class="card">
+          <strong>EP5 — Exposure</strong>
+          <p class="muted">
+            A live podcast “healing conversation” with Elisha unravels in real time as hacked clips interrupt.
+            The ring light slowly turns into an interrogation lamp.
+          </p>
+        </div>
+        <div class="card">
+          <strong>EP6 — The Witness</strong>
+          <p class="muted">
+            Lily records a final confession, admitting she “just wanted to be seen.”
+            Hours later, a new upload appears—edited by unseen hands—forcing the audience to become the last witness.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- DIRECTOR'S VISION -->
+  <!-- VISUAL WORLD -->
   <section id="vision">
     <div class="wrap">
-      <h2>Director’s Vision</h2>
-      <div class="sub">Camera as confession. Beauty as discomfort. Horror as truth.</div>
+      <h2>Visual World &amp; Director’s Vision</h2>
+      <div class="sub">
+        Directly drawn from the vision board and series bible: a color arc, lighting evolution,
+        and symbolism that lets the series move from warm romance to spiritual horror without losing coherence.
+      </div>
       <div class="grid cols-3">
-        <div class="card"><strong>Mia’s World</strong><p class="muted">Soft whites/pinks; overexposed cosmetic lighting — perfection through exposure.</p></div>
-        <div class="card"><strong>Lily’s World</strong><p class="muted">Desaturated blues & deep reds; side-lit practicals — obsession & repression.</p></div>
-        <div class="card"><strong>Aftermath / Archive</strong><p class="muted">Cold cyan LEDs; digital noise; memory corruption as data decay.</p></div>
+        <div class="card">
+          <strong>Mia’s World</strong>
+          <p class="muted">
+            Bright whites and soft pinks, cosmetic high key lighting, lens flares, and curated frames.
+            Exposure as status. Her scenes feel like sponsored content—until the mask slips.
+          </p>
+        </div>
+        <div class="card">
+          <strong>Lily’s World</strong>
+          <p class="muted">
+            Muted blues and deep reds, shadowy corners, practical side light. Spaces that feel sacred and suffocating.
+            Repression shows up in negative space and tightly controlled compositions.
+          </p>
+        </div>
+        <div class="card">
+          <strong>Aftermath &amp; Digital Immortality</strong>
+          <p class="muted">
+            Cold cyan LEDs, screen glow, digital noise, corrupted frames.
+            Files glitch, faces smear, and overexposed white swallows detail—the haunting cost of living forever online.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -182,14 +494,19 @@
   <!-- INVESTORS -->
   <section id="investors">
     <div class="wrap">
-      <h2>Investors</h2>
-      <div class="sub">Smart-scale budget with studio-level craft and a clear distribution path.</div>
+      <h2>Investor Overview</h2>
+      <div class="sub">
+        A contained, festival-first series with clear spend, clear path to audience, and a realistic
+        lane into AVOD/SVOD catalog life. Designed for an investor or EP who wants both cultural impact
+        and a proof-of-concept asset for future seasons or feature expansions.
+      </div>
       <div class="grid cols-2">
         <div class="card">
           <h4>Budget Snapshot</h4>
           <ul class="clean">
-            <li>Total: ~$37K–$40K (6 eps)</li>
-            <li>Cast & Crew ~30% · Camera/Lighting ~25% · Post ~20% · Locations ~15% · Mktg/Cont. ~10%</li>
+            <li>Total production target: <strong>~$37K–$40K</strong> across six 15–20 minute episodes.</li>
+            <li>Allocation: Cast &amp; Crew ~30% · Camera/Lighting ~25% · Post ~20% · Locations &amp; Set ~15% · Contingency &amp; Marketing ~10%.</li>
+            <li>Weekend-centric schedule with location clustering to control costs and maximize screen value.</li>
           </ul>
           <div class="mt-8">
             <a class="btn gold" href="pitch-deck.pdf" target="_blank">Open Pitch Deck</a>
@@ -197,33 +514,75 @@
           </div>
         </div>
         <div class="card">
-          <h4>Distribution & Festivals</h4>
+          <h4>Path to Screens</h4>
           <ul class="clean">
-            <li>Festival lane: SeriesFest, Urbanworld, Outfest</li>
-            <li>AVOD/SVOD: Filmhub syndication; Tubi / Revry / Prime Video</li>
-            <li>Audience build: YouTube episodic window</li>
+            <li>Festival circuit: SeriesFest, Urbanworld, Outfest, and other episodic programs.</li>
+            <li>AVOD/SVOD via aggregators like Filmhub, aiming for platforms including Tubi, Revry, and Prime Video.</li>
+            <li>Staggered YouTube rollout to build organic audience, with WIWGU and other owned channels amplifying the storyworld.</li>
           </ul>
           <div class="mt-8">
-            <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Investor%20Inquiry&body=Name%20%2F%20Company%3A%0AInterest%20(Finance%2FDistribution%2FEP)%3A%0A">Request Data Room</a>
+            <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Investor%20Inquiry&body=Name%20%2F%20Company%3A%0AInterest%20(Finance%2FDistribution%2FEP)%3A%0A">
+              Request Investor Materials
+            </a>
           </div>
         </div>
       </div>
-      <!-- Partnership can live later as a section or link to a form -->
-      <!-- <div class="right mt-8"><a class="btn outline" href="partnership.html">Partnership Application</a></div> -->
+
+      <div class="grid cols-2 mt-12">
+        <div class="card">
+          <h4>What We’re Seeking</h4>
+          <ul class="clean">
+            <li>Lead investor, co-financier, or executive producer to close the production budget.</li>
+            <li>Strategic partners for festival marketing, PR, and distribution negotiations.</li>
+            <li>Potential in-kind support (locations, gear, post) with clear credit and integration terms.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>For Serious Conversations</h4>
+          <p class="muted">
+            Detailed budget, schedule, lookbook, and data room are available upon request.
+            All financial conversations are exploratory and non-binding until formal agreements are executed.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PRESS -->
   <section id="press">
     <div class="wrap">
-      <h2>Press</h2>
-      <div class="sub">One-sheet facts, hashtags, and press contact.</div>
-      <div class="grid cols-3">
-        <div class="card"><strong>Format</strong><p class="muted">Limited series · 6 x 15–20 min · Chicago</p></div>
-        <div class="card"><strong>Hooks</strong><p class="muted">Visibility as modern horror · Confession media · Post-truth romance</p></div>
-        <div class="card"><strong>Targets</strong><p class="muted">Essence, Blavity, AfroTech, IndieWire</p></div>
+      <h2>Press &amp; Positioning</h2>
+      <div class="sub">
+        Positioned at the intersection of genre, culture, and tech: the horror of being watched,
+        believed, and discarded in public.
       </div>
-      <div class="right mt-8"><a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Press%20Inquiry">Press Contact</a></div>
+      <div class="grid cols-3">
+        <div class="card">
+          <strong>Format</strong>
+          <p class="muted">
+            Limited series · 6 x 15–20 minutes · Chicago-set, primarily Black and Brown cast and crew.
+          </p>
+        </div>
+        <div class="card">
+          <strong>Core Hooks</strong>
+          <p class="muted">
+            Visibility as horror · Confessional media · Queer and faith narratives under a true-crime lens ·
+            The haunting consequence of digital immortality.
+          </p>
+        </div>
+        <div class="card">
+          <strong>Press Targets</strong>
+          <p class="muted">
+            Essence, Blavity, Shadow and Act, AfroTech, IndieWire, horror and queer genre outlets,
+            plus festival press corridors.
+          </p>
+        </div>
+      </div>
+      <div class="right mt-8">
+        <a class="btn outline" href="mailto:isaiah@markelmgmt.com?subject=TAM%20Press%20Inquiry">
+          Press / Media Contact
+        </a>
+      </div>
     </div>
   </section>
 
@@ -231,9 +590,15 @@
   <section id="team">
     <div class="wrap">
       <h2>Team</h2>
-      <div class="sub">Markel Productions · Markel Media & Management</div>
+      <div class="sub">Markel Productions · Markel Media &amp; Management</div>
       <div class="card">
-        <strong>Isaiah M. Lesley</strong> — Director · Writer · Producer (Chicago). Work explores faith, identity, and emotional truth through psychological realism.
+        <strong>Isaiah M. Lesley</strong> — Director · Writer · Producer (Chicago).
+        <p class="muted mt-4">
+          Isaiah’s work lives where faith, queerness, housing, and horror intersect. Drawing from his
+          background in youth work and media, he uses psychological realism and genre to ask why we
+          perform goodness when survival is on the line. BFA in Television: Executive Production &amp;
+          Entrepreneurship (Columbia College Chicago).
+        </p>
       </div>
     </div>
   </section>
@@ -242,16 +607,24 @@
   <section id="contact">
     <div class="wrap">
       <h2>Contact</h2>
-      <div class="sub">For investors, casting, crew, and partnerships.</div>
+      <div class="sub">
+        For investors, casting, crew, and partnerships. Please note your lane in the subject line
+        (Investor · Casting · Crew · Press · Partnership).
+      </div>
       <div class="card">
-        <p class="muted">Email: <a href="mailto:isaiah@markelmgmt.com" style="color:var(--gold);text-decoration:none">isaiah@markelmgmt.com</a></p>
+        <p class="muted">
+          Email:
+          <a href="mailto:isaiah@markelmgmt.com" style="color:var(--gold);text-decoration:none">
+            isaiah@markelmgmt.com
+          </a>
+        </p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      © 2025 Markel Media & Management · Markel Productions
+      © 2025 Markel Media &amp; Management · Markel Productions · The Amicicidal Massacre
     </div>
   </footer>
 </body>
