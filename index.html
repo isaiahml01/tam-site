@@ -178,6 +178,47 @@
     .card h3,.card h4{margin-bottom:6px;font-size:16px}
     .card strong{font-weight:600}
 
+    /* CHARACTER WORLDS */
+    .character-grid{
+      display:grid;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media(min-width:920px){
+      .character-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+    .character-card{
+      background:rgba(15,17,21,.96);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px 18px 16px;
+    }
+    .character-card h3{
+      font-size:18px;
+      margin-bottom:6px;
+    }
+    .character-tag{
+      display:inline-block;
+      margin-left:8px;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--gold-2);
+    }
+    .character-card p{
+      font-size:14px;
+      color:#d3d6de;
+      margin-top:6px;
+    }
+    .character-card p strong{
+      display:block;
+      font-weight:600;
+      color:var(--gold-2);
+      margin-bottom:1px;
+    }
+
     ul.clean{list-style:none}
     ul.clean li{
       padding:6px 0;
@@ -350,34 +391,362 @@
     <div class="wrap">
       <h2>Characters</h2>
       <div class="sub">
-        Archetype-driven, spoiler-safe bios pulled from the series bible—designed for casting, investors,
-        and press without revealing the most crucial turns.
+        These are the inner “character worlds” from the series bible—built to give actors, investors,
+        and partners a clear view of the emotional engine behind the rooftop massacre, without spoiling
+        every turn of the plot.
       </div>
-      <div class="grid cols-3">
-        <div class="card">
-          <h4>Lily Jameson <span class="tag">Lead</span></h4>
-          <p class="muted">
-            The Devoted Monster. A social worker and maid of honor whose tenderness masks obsession.
-            Lily survives the rooftop massacre and discovers that in a world addicted to content,
-            the safest place to hide is inside the story everyone wants to hear.
+
+      <div class="character-grid">
+
+        <!-- LILY -->
+        <article class="character-card" id="lily-santos">
+          <h3>LILY SANTOS <span class="character-tag">“THE INVISIBLE WITNESS”</span></h3>
+
+          <p>
+            <strong>Series Function</strong>
+            Primary POV of the darkness. Antagonist in the plot, protagonist in her own love story.
+            She is both victim and perpetrator, the only one who walks away alive in the pilot.
           </p>
-        </div>
-        <div class="card">
-          <h4>Mia Brooks <span class="tag">Lead</span></h4>
-          <p class="muted">
-            The Idol. A rising Chicago influencer whose curated perfection never shows the cracks:
-            her faith doubt, queer history, and fear of disappointing the community that made her.
-            Even in death, Mia’s archive shapes the narrative and haunts every frame.
+
+          <p>
+            <strong>Logline of Her Soul</strong>
+            A woman who has spent her life invisible decides that if she can’t be chosen, she’ll be unforgettable.
           </p>
-        </div>
-        <div class="card">
-          <h4>Elisha Ruiz <span class="tag">Supporting</span></h4>
-          <p class="muted">
-            The Witness. A digital artist and friend caught between grief and survival.
-            Elisha’s eye for images—and rage at how quickly the internet moves on—pushes the series toward
-            uncomfortable truths about spectatorship and revenge.
+
+          <p>
+            <strong>Core Wound</strong>
+            Growing up, Lily was always the side character: the quiet friend, the girl in the background of other people’s selfies,
+            the “you’re so sweet, I wish more guys liked you” girl. Her love and labor were accepted, but she never was.
+            That fermented into a deep, wordless conviction: “If I disappeared, no one would notice.”
           </p>
-        </div>
+
+          <p>
+            <strong>Deepest Fear</strong>
+            That she is fundamentally unlovable unless she is useful.
+          </p>
+
+          <p>
+            <strong>Core Lie She Believes</strong>
+            “If I love Mia the most — if I sacrifice the most — she should be mine.”
+            The knife isn’t an attack; it’s “correction.” Framing Elisha isn’t evil; it’s “order being restored.”
+          </p>
+
+          <p>
+            <strong>True Desire (Unspoken)</strong>
+            To be chosen openly, first, in the light — not as a secret, a backup, or an emotional support.
+          </p>
+
+          <p>
+            <strong>Persona vs. Reality</strong>
+            Persona: Warm, funny, slightly chaotic maid of honor. “Tipsy but harmless,” ride-or-die friend, emotional glue.<br>
+            Reality: Hyper-observant, rehearsed, constantly self-monitoring to appear “normal”
+            (“Be warm. Be helpful. Be normal.” – pilot script). She collects information like a survival tool.
+          </p>
+
+          <p>
+            <strong>Worldview</strong>
+            “Visibility equals safety. If no one sees you, they can’t protect you.”<br>
+            “Love is something you prove with sacrifice.”<br>
+            “If the story is recorded on camera, it becomes the truth.”<br>
+            This fuels her obsession with footage & angles (studying the rooftop camera, hiding the SD card,
+            planting it in the planter).
+          </p>
+
+          <p>
+            <strong>Relationship to Each Main Character</strong>
+            Mia: The sun. The girl who once told her she felt safe and loved with Lily. Lily clings to that as gospel truth;
+            anything that contradicts it (Liam, the engagement, Mia’s “I was drunk” dismissal) is betrayal.<br>
+            Liam: A thief. He “stole” Mia’s destiny. A trespasser on sacred ground.<br>
+            Elisha: A rival witness. Someone else who “sees” Mia, threatens Lily’s role, and ultimately becomes the scapegoat.<br>
+            Olivia: A moral threat. Olivia senses things and will speak up; Lily watches her carefully.<br>
+            Brian: Background noise—until he challenges her. Then he becomes another obstacle in the way of “purifying” Mia’s story.
+          </p>
+
+          <p>
+            <strong>Season Arc Seeded in Pilot</strong>
+            She walks away “free,” but someone texts: “I saw what you did.”
+            From here on, her world isn’t “Did I do it?” but “Can I control the narrative?”
+            Each episode escalates whoever is threatening that control.
+          </p>
+        </article>
+
+        <!-- MIA -->
+        <article class="character-card" id="mia-brooks">
+          <h3>MIA BROOKS <span class="character-tag">“THE PRECIOUS GIRL”</span></h3>
+
+          <p>
+            <strong>Series Function</strong>
+            The face of the tragedy. Her death is the emotional center of the pilot, but her life—as constructed persona—
+            drives the series’ themes of performance, identity, and visibility.
+          </p>
+
+          <p>
+            <strong>Logline of Her Soul</strong>
+            A people-pleasing influencer who built a brand around perfection, only to die the moment she tries to outrun her own truth.
+          </p>
+
+          <p>
+            <strong>Core Wound</strong>
+            She was rewarded her entire life for being “good,” composed, and palatable: the nice Black girl, the responsible one,
+            the one who “made it out” and turned it into aesthetic content. No one asked what she actually wanted as long as she kept smiling.
+          </p>
+
+          <p>
+            <strong>Deepest Fear</strong>
+            That if she stops performing “precious,” people will leave.
+          </p>
+
+          <p>
+            <strong>Core Lie She Believes</strong>
+            “If I keep everyone happy—my followers, my fiancé, my friends—nothing truly bad will happen.”
+          </p>
+
+          <p>
+            <strong>True Desire</strong>
+            To be messy, complicated, uncertain—and still loved. To say “I don’t know if I want this wedding”
+            without it detonating her world.
+          </p>
+
+          <p>
+            <strong>Persona vs. Reality</strong>
+            Persona: “Soon-to-be Mrs. Liam Brooks,” lifestyle vlogger, romantic and grateful. “This one matters.” – pilot script<br>
+            Reality: Anxious, hyper-aware, slightly out of breath inside her own life. Watching herself from outside constantly.
+          </p>
+
+          <p>
+            <strong>Worldview</strong>
+            “If it’s recorded beautifully, then it was worth it.”<br>
+            “Being chosen (engagement, ring, wedding) is the endpoint of womanhood.”<br>
+            “Conflict is a threat, not a path to truth.”
+          </p>
+
+          <p>
+            <strong>Relationship Dynamics</strong>
+            Lily: Her oldest emotional intimacy. She did say “I love you” once (drunk or not), and she’s quietly pleased to keep Lily
+            as backup emotional oxygen. She relies on Lily without interrogating what that means for Lily.<br>
+            Liam: Her prize and her prison. He represents success + security + aesthetics. She wants the idea of him.<br>
+            Elisha: Unspoken history. Emotional cheating, queer subtext, a version of herself that feels dangerous but honest.<br>
+            Olivia & Brian: Social glue, comfort, familiar roles. They keep her world spinning.
+          </p>
+
+          <p>
+            <strong>Season Arc Seeded in Pilot</strong>
+            Her death becomes a moral question, not just a tragedy:<br>
+            “Did Mia’s refusal to confront her own truth help create this massacre?”<br>
+            Future episodes chase that question through footage, secrets, and memory.
+          </p>
+        </article>
+
+        <!-- LIAM -->
+        <article class="character-card" id="liam-brooks">
+          <h3>LIAM BROOKS <span class="character-tag">“THE GOOD GUY WHO ISN’T”</span></h3>
+
+          <p>
+            <strong>Series Function</strong>
+            Catalyst. Not a cartoon villain—sloppy, careless, selfish in ways that feel painfully recognizable.
+          </p>
+
+          <p>
+            <strong>Logline of His Soul</strong>
+            A man who believes he’s fundamentally decent, even as his small betrayals stack into catastrophe.
+          </p>
+
+          <p>
+            <strong>Core Wound</strong>
+            He’s terrified of being ordinary, un-special, unnoticed. He uses relationships as proof of his worth.
+          </p>
+
+          <p>
+            <strong>Deepest Fear</strong>
+            Being seen as a bad person—or worse, being boring and replaceable.
+          </p>
+
+          <p>
+            <strong>Core Lie He Believes</strong>
+            “As long as I’m not the worst person in the room, I’m still a good guy.”
+          </p>
+
+          <p>
+            <strong>True Desire</strong>
+            To be adored without having to be honest.
+          </p>
+
+          <p>
+            <strong>Persona vs. Reality</strong>
+            Persona: Charming fiancé, supportive of Mia’s vlogging, joking about the surprise party, “the lucky guy.” – pilot script<br>
+            Reality: DM’ing “E” with “u free after?” in the car, juggling attention, assuming consequences will never truly land. – pilot script
+          </p>
+
+          <p>
+            <strong>Worldview</strong>
+            “Everyone bends the rules a little.”<br>
+            “If no one has proof, we can move on.”<br>
+            “Women always forgive if you make them feel special enough.”
+          </p>
+
+          <p>
+            <strong>Season Arc Seeded in Pilot</strong>
+            Even dead, his phone, DMs, and past behavior keep detonating: a posthumous breadcrumb trail that drives future conflicts,
+            investigations, and flashbacks.
+          </p>
+        </article>
+
+        <!-- OLIVIA -->
+        <article class="character-card" id="olivia">
+          <h3>OLIVIA <span class="character-tag">“THE ONE WHO SAW IT COMING”</span></h3>
+
+          <p>
+            <strong>Series Function</strong>
+            Moral compass, future guilt-engine.
+          </p>
+
+          <p>
+            <strong>Logline of Her Soul</strong>
+            A woman who notices danger early but second-guesses herself until it’s too late.
+          </p>
+
+          <p>
+            <strong>Core Wound</strong>
+            She once tried to warn someone (friend, sibling, ex) and was dismissed as “dramatic.”
+            Something bad happened. Now she hesitates.
+          </p>
+
+          <p>
+            <strong>Deepest Fear</strong>
+            Being the only one who sees the truth—and being ignored again.
+          </p>
+
+          <p>
+            <strong>Core Lie She Believes</strong>
+            “If I speak up and I’m wrong, I’ll ruin everything.”
+          </p>
+
+          <p>
+            <strong>True Desire</strong>
+            To be trusted when she says “something is off.”
+          </p>
+
+          <p>
+            <strong>Persona vs. Reality</strong>
+            Persona: Quirky, comedic, the friend who shows up with a bowl of olives as something “uniquely you.” – pilot script<br>
+            Reality: Hyper-sensitive to micro-tensions—Elisha’s eye rolls, Lily’s weird toast, Liam’s glazed stare at his phone.
+          </p>
+
+          <p>
+            <strong>Worldview</strong>
+            “Patterns don’t lie.”<br>
+            “Silence is complicity, but speaking up has a cost.”
+          </p>
+
+          <p>
+            <strong>Season Arc Seeded in Pilot</strong>
+            Her memory of Lily’s toast—Mia “living in the light” and “forgetting the shadows”—becomes key testimony later.
+            Olivia has to decide whether to stay loyal to the friend group or to the truth.
+          </p>
+        </article>
+
+        <!-- BRIAN -->
+        <article class="character-card" id="brian">
+          <h3>BRIAN <span class="character-tag">“THE DEFLECTION”</span></h3>
+
+          <p>
+            <strong>Series Function</strong>
+            Relief and tragedy. He brings levity… until he dies, shocking the audience into realizing no one is safe.
+          </p>
+
+          <p>
+            <strong>Logline of His Soul</strong>
+            A man who uses jokes as armor, only to discover that laughter doesn’t protect you from real violence.
+          </p>
+
+          <p>
+            <strong>Core Wound</strong>
+            Conflict defined his childhood home; he survived by staying neutral and funny.
+          </p>
+
+          <p>
+            <strong>Deepest Fear</strong>
+            Being the center of conflict. Being forced to take a side.
+          </p>
+
+          <p>
+            <strong>Core Lie He Believes</strong>
+            “If I keep it light, nothing will really explode.”
+          </p>
+
+          <p>
+            <strong>True Desire</strong>
+            To be taken seriously without starting a war.
+          </p>
+
+          <p>
+            <strong>Persona vs. Reality</strong>
+            Persona: “Pre-game strategy, babe.” The clown, the bit, the group’s pressure valve. – pilot script<br>
+            Reality: When the knife comes out, he panics but does actually try to protect Mia and confront Lily—and dies for it. – pilot script
+          </p>
+
+          <p>
+            <strong>Season Arc Seeded in Pilot</strong>
+            His jokes, texts, and throwaway lines become evidence in hindsight: the things nobody listened to
+            because he was “just being funny.”
+          </p>
+        </article>
+
+        <!-- ELISHA -->
+        <article class="character-card" id="elisha">
+          <h3>ELISHA <span class="character-tag">“THE MISFRAMED OBSESSION”</span></h3>
+
+          <p>
+            <strong>Series Function</strong>
+            Red herring, scapegoat, and mirror to Mia’s repressed self.
+          </p>
+
+          <p>
+            <strong>Logline of Her Soul</strong>
+            A woman who tried to move on from Mia, only to be framed as the monster in someone else’s story.
+          </p>
+
+          <p>
+            <strong>Core Wound</strong>
+            She once loved someone who wouldn’t fully choose her. Mia is that wound rewritten.
+          </p>
+
+          <p>
+            <strong>Deepest Fear</strong>
+            That she will always be “the almost”—almost chosen, almost loved, almost safe.
+          </p>
+
+          <p>
+            <strong>Core Lie She Believes</strong>
+            “If I act like I’m over it, I can’t be hurt by it anymore.”
+          </p>
+
+          <p>
+            <strong>True Desire</strong>
+            To have her love and her anger recognized as valid, not “too much.”
+          </p>
+
+          <p>
+            <strong>Persona vs. Reality</strong>
+            Persona: Camera-ready, confident, glowing; the “baddie friend” in Mia’s world. – pilot script<br>
+            Reality: Jealous, conflicted, trying not to show how much Mia + Liam’s dynamic stings or how unsafe she feels in that triangle.
+          </p>
+
+          <p>
+            <strong>Worldview</strong>
+            “Everyone lies about who they want.”<br>
+            “If there’s footage, they can’t twist the truth.”<br>
+            And yet: Lily gets to the footage first.
+          </p>
+
+          <p>
+            <strong>Season Arc Seeded in Pilot</strong>
+            Lily’s rooftop statement quietly frames Elisha as the killer.
+            Elisha becomes the focal point of the investigation arc—an “obsessed ex” in the eyes of cops, press, and the internet—
+            even as the audience is forced to question whose obsession really caused the massacre.
+          </p>
+        </article>
+
       </div>
     </div>
   </section>
